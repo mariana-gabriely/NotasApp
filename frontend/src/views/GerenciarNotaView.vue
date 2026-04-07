@@ -3,9 +3,7 @@
   <div class="container editor-container">
     <div class="editor-header">
       <button class="btn-back" @click="$router.push('/')">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
+        <IconBack />
         <span>Voltar</span>
       </button>
       <div class="header-actions">
@@ -27,6 +25,7 @@
 import { ref, onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '@/api'
+import IconBack from '@/components/icons/IconBack.vue'
 
 const props = defineProps(['id'])
 const router = useRouter()

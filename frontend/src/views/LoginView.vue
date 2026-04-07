@@ -2,9 +2,7 @@
   <div class="login-container">
     <div class="login-box">
       <div class="brand">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="#00a82d" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 2H6C4.89 2 4 2.89 4 4V20C4 21.11 4.89 22 6 22H18C19.11 22 20 21.11 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z"/>
-        </svg>
+        <IconLogo :size="40" />
         <h1>{{ isRegistering ? 'Criar conta no NotesApp' : 'Entrar no NotesApp' }}</h1>
       </div>
 
@@ -45,6 +43,7 @@
 import { ref, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import api from '@/api'
+import IconLogo from '@/components/icons/IconLogo.vue'
 
 const router = useRouter()
 const isRegistering = ref(false)
